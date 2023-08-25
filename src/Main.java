@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         String entry = scanner.next();
@@ -62,7 +63,8 @@ public class Main {
                 }
             }
         } else {
-            System.out.println("Неверный формат");
+
+            throw new IOException("Неверный формат!");
         }
 
     }
